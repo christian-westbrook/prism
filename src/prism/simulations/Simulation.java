@@ -140,6 +140,7 @@ public class Simulation
 		else
 			curesIsolated = true;
 
+		trace.add("Timestep,Stranded,Infected,Cured");
 		trace.add(timestep + "," + stranded + "," + infected +  "," + cured);
 
 		while(simulating)
@@ -347,6 +348,7 @@ public class Simulation
 			}
 
 			trace.add(timestep + "," + stranded + "," + infected +  "," + cured);
+			System.out.println(timestep + "," + stranded + "," + infected +  "," + cured);
 		}
 
 		if(fsi.writeLog(network.getTitle(), log) && fsi.writeTrace(network.getTitle(), trace))

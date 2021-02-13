@@ -96,11 +96,11 @@ public class FileSystemInterface
 	{
 		try
 		{
-			File outFile = new File("./simulations/" + title + ".trace");
+			File outFile = new File("./simulations/" + title + ".csv");
 
 			if(outFile.exists())
 				outFile.delete();
-				
+
 			FileWriter fw = new FileWriter(outFile);
 			BufferedWriter bw = new BufferedWriter(fw);
 			PrintWriter pw = new PrintWriter(bw);
